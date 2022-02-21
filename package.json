@@ -6,11 +6,11 @@
   "repository": "internetguru/scrolltopable",
   "main": "index.js",
   "keywords": [
-    "scrolltop"
-    "scroll"
+    "scrolltop",
+    "scroll",
     "top",
-    "scroll-to-top"
+    "scroll-to-top",
     "npm",
-    "package",
+    "package"
   ]
 }
