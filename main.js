@@ -1,5 +1,5 @@
 
-import { Scrolltopable } from './scrolltopable.js'
+import { Scrolltopable } from './index.js'
 Scrolltopable.init({
 
 })
