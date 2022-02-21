@@ -41,7 +41,7 @@ Scrolltopable.init({
 |------------------|-------------|-----------|
 |Config.text | `^` | TODO |
 |Config.title | `Top` | TODO |
-|Config.hidePosition | 500 | TODO |
+|Config.hidePosition | `500` | TODO |
 |Config.activeTimeout | `0` | TODO |
 |Config.actionTimeout | `200` | TODO |
 |Config.deltaYshow | `200` | TODO |
