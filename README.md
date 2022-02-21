@@ -69,7 +69,7 @@ If you find this program useful, please **send a donation** to its developers to
 
 If you’d like to make a donation of any value, please send it to the following PayPal address:
 
-[PayPal Donation](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=G6A49JPWQKG7A)
+[PayPal Donation](https://www.paypal.com/donate/?hosted_button_id=FVH97VVYW8NM6)
 
 Since we aren’t a tax-exempt organization, we can’t offer you a tax deduction. But for all donations over 50 USD, we’d be happy to recognize your contribution on this README file for the next release.
 
