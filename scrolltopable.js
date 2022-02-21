@@ -129,9 +129,6 @@ let Scrolltopable = function () {
     }
 
   return {
-    /**
-    * @param  {Object} cfg custom configuration
-    */
     init: function (cfg) {
       Config = {...Config, ...cfg}
       createButton()
