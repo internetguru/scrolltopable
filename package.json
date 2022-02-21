@@ -1,5 +1,15 @@
 {
   "name": "@internetguru/scrolltopable",
-  "version": "0.1.3",
-  "main": "index.js"
+  "version": "0.1.5",
+  "description": "Scrolltopable is a JavaScript module that provides ultimate scroll-to-top functionality. No dependencies and frameworks, pure JavaScript!",
+  "license": "MIT",
+  "main": "index.js",
+  "keywords": [
+    "scrolltop"
+    "scroll"
+    "top",
+    "scroll-to-top"
+    "npm",
+    "package",
+  ]
 }
