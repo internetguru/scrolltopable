@@ -1,10 +1,9 @@
 {
   "name": "@internetguru/scrolltopable",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Scrolltopable is a JavaScript module that provides ultimate scroll-to-top functionality. No dependencies and frameworks, pure JavaScript!",
   "license": "MIT",
   "repository": "internetguru/scrolltopable",
-  "main": "index.js",
   "keywords": [
     "scrolltop",
     "scroll",
@@ -12,5 +11,12 @@
     "scroll-to-top",
     "npm",
     "package"
-  ]
+  ],
+  "main": "index.js",
+  "scripts": {
+    "prepublishOnly": "uglifyjs --compress --mangle --output index.min.js -- index.js"
+  },
+  "devDependencies": {
+    "uglify-js": "^3.15.1"
+  }
 }

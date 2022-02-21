@@ -8,11 +8,26 @@
 
 ## Installation
 
-TODO
+- Using npm
+
+```
+npm i @internetguru/scrolltopable --save
+```
+
+- Directly using unpkg
+
+```
+<script type="module" src="https://unpkg.com/@internetguru/scrolltopable"></script>
+```
 
 ## Usage
 
-TODO
+```js
+import { Scrolltopable } from '@internetguru/scrolltopable'
+Scrolltopable.init({
+  // options
+})
+```
 
 ## License
 
