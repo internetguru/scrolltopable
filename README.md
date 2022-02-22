@@ -56,8 +56,8 @@ Scrolltopable.init({
 
 ## Maintainers
 
--  Pavel Petržela pavel.petrzela@internetguru.cz
--  Jiří Pavelka jiri.pavelka@internetguru.cz
+-  Paulo Petrzela paulo@internetguru.io
+-  George Pavelka george@internetguru.io
 
 ## Contributing
 
@@ -73,9 +73,9 @@ If you’d like to make a donation of any value, please send it to the following
 
 Since we aren’t a tax-exempt organization, we can’t offer you a tax deduction. But for all donations over 50 USD, we’d be happy to recognize your contribution on this README file for the next release.
 
-We are also happy to consider making particular improvements or changes, or giving specific technical assistance, in return for a substantial donation over 100 USD. If you would like to discuss this possibility, write us at info@internetguru.cz.
+We are also happy to consider making particular improvements or changes, or giving specific technical assistance, in return for a substantial donation over 100 USD. If you would like to discuss this possibility, write us at info@internetguru.io.
 
-Another possibility is to pay a software maintenance fee. Again, write us about this at info@internetguru.cz to discuss how much you want to pay and how much maintenance we can offer in return.
+Another possibility is to pay a software maintenance fee. Again, write us about this at info@internetguru.io to discuss how much you want to pay and how much maintenance we can offer in return.
 
 Thanks for your support!
 
