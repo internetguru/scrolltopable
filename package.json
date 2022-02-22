@@ -5,10 +5,10 @@
   "license": "MIT",
   "repository": "internetguru/scrolltopable",
   "keywords": [
-    "scrolltop",
     "scroll",
-    "top",
+    "scroll-top",
     "scroll-to-top",
+    "scrolltop",
     "npm",
     "package"
   ],
