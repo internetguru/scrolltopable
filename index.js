@@ -3,16 +3,15 @@ var Config = {}
 Config.ns = 'js-scrolltopable' // wrapper element (a) id value
 Config.text = '^' // text content
 Config.title = 'Top' // text content
-Config.hidePosition = 500 // display / hide button int px from top
-Config.scrollhideClass = `${Config.ns}-scrollhide`
-Config.noprintClass = 'noprint'
+Config.hideTop = 500 // display / hide button int px from top
+Config.extraClass = 'noprint'
 Config.visibleClass = `${Config.ns}--visible`
 Config.activeClass = `${Config.ns}--active`
 Config.activeTimeout = 0 // ms
-Config.actionTimeout = 200 // ms
-Config.deltaYshow = 200
-Config.deltaYhide = 200
-Config.deltaYbottom = 500
+Config.scrollActionTimeout = 200 // ms
+Config.deltaUpShow = 200
+Config.deltaDownHide = 200
+Config.showBottom = 500
 Config.styles = `
   .${Config.ns} {
     display: none;
@@ -82,22 +81,22 @@ let Scrolltopable = function () {
         const scrollTop = getScrollTop()
         const delta = scrollTop - lastScrollTop
         const deltaAbs = Math.abs(delta)
-        if (getDocumentHeight() - scrollTop < Config.deltaYbottom) {
+        if (getDocumentHeight() - scrollTop < Config.showBottom) {
           showButton()
         } else if (
-          scrollTop < Config.hidePosition
-          || (delta > 0 && deltaAbs > Config.deltaYhide)
+          scrollTop < Config.hideTop
+          || (delta > 0 && deltaAbs > Config.deltaDownHide)
         ) {
           hideButton()
-        } else if (deltaAbs > Config.deltaYshow) {
+        } else if (deltaAbs > Config.deltaUpShow) {
           showButton()
         }
         lastScrollTop = scrollTop
-      }, Config.actionTimeout)
+      }, Config.scrollActionTimeout)
     },
     initPosition = function () {
       const scrollTop = getScrollTop()
-      if (scrollTop < Config.hidePosition) {
+      if (scrollTop < Config.hideTop) {
         return
       }
       showButton()
@@ -121,7 +120,7 @@ let Scrolltopable = function () {
       button = document.createElement('a')
       button.id = Config.ns
       button.title = Config.title
-      button.className = `${Config.noprintClass} ${Config.ns}`
+      button.className = `${Config.extraClass} ${Config.ns}`
       let span = document.createElement('span')
       span.innerHTML = Config.text
       button.appendChild(span)
