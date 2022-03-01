@@ -6,7 +6,10 @@
   <title>Scrolltopable example</title>
   <script type="module" src="index.min.js"></script>
   <link rel="stylesheet" type="text/css" href="basic.css"/>
-  <script type="module" src="main.js"></script>
+  <script type="module">
+    import { Scrolltopable } from './index.min.js'
+    Scrolltopable.init({})
+  </script>
   <style type="text/css">
     html {
       scroll-behavior: smooth;

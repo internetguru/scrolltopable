@@ -4,38 +4,32 @@
 [![npm](https://img.shields.io/npm/v/@internetguru/scrolltopable)](https://www.npmjs.com/package/@internetguru/scrolltopable)
 ![GitHub file size in bytes](https://img.shields.io/github/size/internetguru/scrolltopable/index.min.js?label=minified%20size)
 
-
 # Scrolltopable
 
 > Scrolltopable is a JavaScript module that provides **ultimate scroll-to-top** functionality. **No dependencies and frameworks**, pure JavaScript!
 
 See our [demo](https://internetguru.github.io/scrolltopable/).
 
-## Installation
+## Simple Usage
 
-- Using npm
-
-  ```sh
-  npm i @internetguru/scrolltopable --save
-  ```
-
-- Directly using [unpkg](https://unpkg.com/)
-
-  ```html
-  <!-- include scrolltopable -->
-  <script type="module" src="https://unpkg.com/@internetguru/scrolltopable@latest/index.min.js"></script>
+```html
+<head>
   <!-- include basic css -->
   <link rel="stylesheet" type="text/css" href="https://unpkg.com/@internetguru/scrolltopable@latest/basic.css"/>
-  ```
-
-## Usage
-
-```js
-import { Scrolltopable } from '@internetguru/scrolltopable'
-Scrolltopable.init({
-  // options
-})
+  <!-- include scrolltopable -->
+  <script type="module" src="https://unpkg.com/@internetguru/scrolltopable@latest/index.min.js"></script>
+  <!-- initialization with modifying default options -->
+  <script type="module">
+    import { Scrolltopable } from './index.min.js'
+    Scrolltopable.init({
+      text: '⌃',
+      hideTop: 0,
+    })
+  </script>
+</head>
 ```
+
+Note: you can install package locally by running `npm i @internetguru/scrolltopable --save`.
 
 ## Options
 
