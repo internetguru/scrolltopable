@@ -1,4 +1,3 @@
-
 var Config = {}
 Config.ns = 'js-scrolltopable' // wrapper element (a) id value
 Config.text = '^' // text content
