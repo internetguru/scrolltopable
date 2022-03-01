@@ -56,7 +56,7 @@ let Scrolltopable = function () {
         if (getDocumentHeight() - scrollTop < Config.showBottom) {
           showButton()
         } else if (
-          scrollTop < Config.hideTop
+          scrollTop <= Config.hideTop
           || (delta > 0 && deltaAbs > Config.deltaDownHide)
         ) {
           hideButton()
@@ -68,7 +68,7 @@ let Scrolltopable = function () {
     },
     initPosition = function () {
       const scrollTop = getScrollTop()
-      if (scrollTop < Config.hideTop) {
+      if (scrollTop <= Config.hideTop) {
         return
       }
       showButton()
