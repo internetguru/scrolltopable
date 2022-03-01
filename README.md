@@ -22,10 +22,10 @@ See our [demo](https://internetguru.github.io/scrolltopable/).
 - Directly using [unpkg](https://unpkg.com/)
 
   ```html
-  <!-- source -->
-  <script type="module" src="https://unpkg.com/@internetguru/scrolltopable"></script>
-  <!-- minified -->
+  <!-- include scrolltopable -->
   <script type="module" src="https://unpkg.com/@internetguru/scrolltopable@latest/index.min.js"></script>
+  <!-- include basic css -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@internetguru/scrolltopable@latest/basic.css"/>
   ```
 
 ## Usage
@@ -53,7 +53,6 @@ Scrolltopable.init({
 |Config.extraClass | `noprint` | Button extra class(es) |
 |Config.visibleClass | `${Config.ns}--visible` | Class for visible button |
 |Config.activeClass | `${Config.ns}--active` | Class for active button (`activeTimeout > 0`) |
-|Config.styles | [See implementation](index.js) | Overwite default styles |
 
 ## Maintainers
 
