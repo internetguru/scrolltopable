@@ -1,7 +1,9 @@
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/internetguru/scrolltopable/Build)
+![GitHub](https://img.shields.io/github/license/internetguru/scrolltopable)
 [![npm](https://img.shields.io/npm/v/@internetguru/scrolltopable)](https://www.npmjs.com/package/@internetguru/scrolltopable)
 ![GitHub file size in bytes](https://img.shields.io/github/size/internetguru/scrolltopable/index.min.js?label=minified%20size)
-![GitHub](https://img.shields.io/github/license/internetguru/scrolltopable)
+
 
 # Scrolltopable
 
