@@ -1,7 +1,8 @@
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/internetguru/scrolltopable/Build)
+![GitHub](https://img.shields.io/github/license/internetguru/scrolltopable)
 [![npm](https://img.shields.io/npm/v/@internetguru/scrolltopable)](https://www.npmjs.com/package/@internetguru/scrolltopable)
 ![GitHub file size in bytes](https://img.shields.io/github/size/internetguru/scrolltopable/index.min.js?label=minified%20size)
-![GitHub](https://img.shields.io/github/license/internetguru/scrolltopable)
 
 # Scrolltopable
 
@@ -9,31 +10,26 @@
 
 See our [demo](https://internetguru.github.io/scrolltopable/).
 
-## Installation
+## Simple Usage
 
-- Using npm
-
-  ```sh
-  npm i @internetguru/scrolltopable --save
-  ```
-
-- Directly using [unpkg](https://unpkg.com/)
-
-  ```html
-  <!-- source -->
-  <script type="module" src="https://unpkg.com/@internetguru/scrolltopable"></script>
-  <!-- minified -->
+```html
+<head>
+  <!-- include basic css -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@internetguru/scrolltopable@latest/basic.css"/>
+  <!-- include scrolltopable -->
   <script type="module" src="https://unpkg.com/@internetguru/scrolltopable@latest/index.min.js"></script>
-  ```
-
-## Usage
-
-```js
-import { Scrolltopable } from '@internetguru/scrolltopable'
-Scrolltopable.init({
-  // options
-})
+  <!-- initialization with modifying default options -->
+  <script type="module">
+    import { Scrolltopable } from './index.min.js'
+    Scrolltopable.init({
+      text: '⌃',
+      hideTop: 0,
+    })
+  </script>
+</head>
 ```
+
+Note: you can install package locally by running `npm i @internetguru/scrolltopable --save`.
 
 ## Options
 
@@ -51,7 +47,6 @@ Scrolltopable.init({
 |Config.extraClass | `noprint` | Button extra class(es) |
 |Config.visibleClass | `${Config.ns}--visible` | Class for visible button |
 |Config.activeClass | `${Config.ns}--active` | Class for active button (`activeTimeout > 0`) |
-|Config.styles | [See implementation](index.js) | Overwite default styles |
 
 ## Maintainers
 

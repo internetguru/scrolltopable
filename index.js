@@ -1,4 +1,3 @@
-
 var Config = {}
 Config.ns = 'js-scrolltopable' // wrapper element (a) id value
 Config.text = '^' // text content
@@ -12,33 +11,6 @@ Config.scrollActionTimeout = 200 // ms
 Config.deltaUpShow = 200
 Config.deltaDownHide = 200
 Config.showBottom = 500
-Config.styles = `
-  .${Config.ns} {
-    display: none;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    background: rgba(0,0,0,0.5);
-    color: white;
-    width: 3rem;
-    height: 3rem;
-    margin: 0.5em;
-    border-radius: 0.25em;
-    cursor: pointer;
-  }
-  .${Config.visibleClass} {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .${Config.ns} > span {
-    font-family: Arial, sans-serif;
-    font-size: 3em;
-    position: relative;
-    top: 0.15em;
-  }
-}
-`
 
 let Scrolltopable = function () {
 
@@ -84,7 +56,7 @@ let Scrolltopable = function () {
         if (getDocumentHeight() - scrollTop < Config.showBottom) {
           showButton()
         } else if (
-          scrollTop < Config.hideTop
+          scrollTop <= Config.hideTop
           || (delta > 0 && deltaAbs > Config.deltaDownHide)
         ) {
           hideButton()
@@ -96,7 +68,7 @@ let Scrolltopable = function () {
     },
     initPosition = function () {
       const scrollTop = getScrollTop()
-      if (scrollTop < Config.hideTop) {
+      if (scrollTop <= Config.hideTop) {
         return
       }
       showButton()
