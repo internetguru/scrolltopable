@@ -21,7 +21,8 @@ jobs:
       with:
         node-version: '14'
     - run: npm ci
+    - run: npm --no-git-tag-version version $(<VERSION)
     - run: npm run prepublishOnly
     - uses: stefanzweifel/git-auto-commit-action@v4
       with:
-        commit_message: CI build
+        commit_message: CI npm build
