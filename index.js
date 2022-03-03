@@ -1,16 +1,16 @@
 var Config = {}
-Config.ns = 'js-scrolltopable' // wrapper element (a) id value
-Config.text = '^' // text content
-Config.title = 'Top' // text content
-Config.hideTop = 500 // display / hide button int px from top
-Config.extraClass = 'noprint'
-Config.visibleClass = `${Config.ns}--visible`
-Config.activeClass = `${Config.ns}--active`
-Config.activeTimeout = 0 // ms
-Config.scrollActionTimeout = 200 // ms
-Config.deltaUpShow = 200
-Config.deltaDownHide = 200
-Config.showBottom = 500
+Config.text = '^' // Text or HTML to be inserted into main element
+Config.title = 'Top' // Button title
+Config.hideTop = 500 // Position in px from the top of the page where button will be hidden
+Config.showBottom = 500 // Position in from the bottom of the page where button will be shown
+Config.deltaUpShow = 200 // Scroll up delta in px which show button
+Config.deltaDownHide = 200 // Scroll down delta in px which hide button
+Config.activeTimeout = 0 // For how long time in ms button should have `activeClass` and be visible after click on button
+Config.scrollActionTimeout = 200 // For how long should be processing scroll delayed after stop scrolling
+Config.ns = 'js-scrolltopable' // Button id and prefix for classes
+Config.extraClass = 'noprint' // Button extra class(es)
+Config.visibleClass = `${Config.ns}--visible` // Class for visible button
+Config.activeClass = `${Config.ns}--active` // Class for active button (`activeTimeout > 0`)
 
 let Scrolltopable = function () {
 
