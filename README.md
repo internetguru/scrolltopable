@@ -22,7 +22,7 @@ See our [demo](https://internetguru.github.io/scrolltopable/).
   <script type="module">
     import { Scrolltopable } from './index.min.js'
     Scrolltopable.init({
-      text: '⌃',
+      text: '↑',
       hideTop: 0,
     })
   </script>
