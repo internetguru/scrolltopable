@@ -35,18 +35,18 @@ Note: you can install package locally by running `npm i @internetguru/scrolltopa
 
 |Configuration name|Default value|Description|
 |------------------|-------------|-----------|
-| Config.text | `^` | Text or HTML to be inserted into main element |
-| Config.title | `Top` | Button title |
-| Config.hideTop | `500` | Position in px from the top of the page where button will be hidden |
-| Config.showBottom | `500` | Position in from the bottom of the page where button will be shown |
-| Config.deltaUpShow | `200` | Scroll up delta in px which show button |
-| Config.deltaDownHide | `200` | Scroll down delta in px which hide button |
-| Config.activeTimeout | `0` | For how long time in ms button should have `activeClass` and be visible after click on button |
-| Config.scrollActionTimeout | `200` | For how long should be processing scroll delayed after stop scrolling |
-| Config.ns | `js-scrolltopable` | Button id and prefix for classes |
-| Config.extraClass | `noprint` | Button extra class(es) |
-| Config.visibleClass | ``${Config.ns}--visible`` | Class for visible button |
-| Config.activeClass | ``${Config.ns}--active`` | Class for active button (`activeTimeout > 0`) |
+|Config.text | `^` | Text or HTML to be inserted into main element |
+|Config.title | `Top` | Button title |
+|Config.hideTop | `500` | Position in px from the top of the page where button will be hidden |
+|Config.showBottom | `500` | Position in from the bottom of the page where button will be shown |
+|Config.deltaUpShow | `200` | Scroll up delta in px which show button |
+|Config.deltaDownHide | `200` | Scroll down delta in px which hide button |
+|Config.activeTimeout | `0` | For how long time in ms button should have `activeClass` and be visible after click on button |
+|Config.scrollActionTimeout | `200` | For how long should be processing scroll delayed after stop scrolling |
+|Config.ns | `js-scrolltopable` | Button id and prefix for classes |
+|Config.extraClass | `noprint` | Button extra class(es) |
+|Config.visibleClass | `${Config.ns}--visible` | Class for visible button |
+|Config.activeClass | `${Config.ns}--active` | Class for active button (`activeTimeout > 0`) |
 
 ## Maintainers
 
