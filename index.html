@@ -3,35 +3,149 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Scrolltopable example</title>
+  <title>Scrolltopable</title>
   <script type="module" src="index.min.js"></script>
   <link rel="stylesheet" type="text/css" href="basic.css"/>
+  <link rel="stylesheet" href="github-markdown.css"/>
+  <style>
+  .markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+  }
+  @media (max-width: 767px) {
+    .markdown-body {
+      padding: 15px;
+    }
+  }
+  </style>
   <script type="module">
     import { Scrolltopable } from './index.min.js'
     Scrolltopable.init({})
   </script>
-  <style type="text/css">
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      padding: 0;
-      margin: 0;
-      position: relative;
-    }
-    main {
-      height: 500em;
-    }
-    header,
-    footer {
-      height: 500px;
-      background: #ddd;
-    }
-  </style>
 </head>
-<body>
-  <header/>
-  <main></main>
-  <footer/>
+<body class="markdown-body">
+<p><img src="https://img.shields.io/github/workflow/status/internetguru/scrolltopable/Build" alt="GitHub Workflow Status" /> <img src="https://img.shields.io/github/license/internetguru/scrolltopable" alt="GitHub" /> <a href="https://www.npmjs.com/package/@internetguru/scrolltopable"><img src="https://img.shields.io/npm/v/@internetguru/scrolltopable" alt="npm" /></a> <embed src="https://img.shields.io/github/size/internetguru/scrolltopable/index.min.js?label=minified%20size" /></p>
+<h1 id="scrolltopable">Scrolltopable</h1>
+<blockquote>
+<p>Scrolltopable is a JavaScript module that provides <strong>ultimate scroll-to-top</strong> functionality. <strong>No dependencies and frameworks</strong>, pure JavaScript!</p>
+</blockquote>
+<p>See our <a href="https://internetguru.github.io/scrolltopable/">demo</a>.</p>
+<h2 id="simple-usage">Simple Usage</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true"></a>  <span class="co">&lt;!-- include basic css --&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true"></a>  <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> href=</span><span class="st">&quot;https://unpkg.com/@internetguru/scrolltopable@latest/basic.css&quot;</span><span class="kw">/&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true"></a>  <span class="co">&lt;!-- include scrolltopable --&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true"></a>  <span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span><span class="ot"> src=</span><span class="st">&quot;https://unpkg.com/@internetguru/scrolltopable@latest/index.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true"></a>  <span class="co">&lt;!-- initialization with modifying default options --&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true"></a>  <span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true"></a>    <span class="im">import</span> { Scrolltopable } <span class="im">from</span> <span class="st">&#39;./index.min.js&#39;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true"></a>    Scrolltopable<span class="op">.</span><span class="fu">init</span>({</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true"></a>      <span class="dt">text</span><span class="op">:</span> <span class="st">&#39;⌃&#39;</span><span class="op">,</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true"></a>      <span class="dt">hideTop</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true"></a>    })</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true"></a>  <span class="kw">&lt;/script&gt;</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
+<p>Note: you can install package locally by running <code>npm i @internetguru/scrolltopable --save</code>.</p>
+<h2 id="options">Options</h2>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 30%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Configuration name</th>
+<th>Default value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Config.text</td>
+<td><code>^</code></td>
+<td>Text or HTML to be inserted into main element</td>
+</tr>
+<tr class="even">
+<td>Config.title</td>
+<td><code>Top</code></td>
+<td>Button title</td>
+</tr>
+<tr class="odd">
+<td>Config.hideTop</td>
+<td><code>500</code></td>
+<td>Position in px from the top of the page where button will be hidden</td>
+</tr>
+<tr class="even">
+<td>Config.showBottom</td>
+<td><code>500</code></td>
+<td>Position in from the bottom of the page where button will be shown</td>
+</tr>
+<tr class="odd">
+<td>Config.deltaUpShow</td>
+<td><code>200</code></td>
+<td>Scroll up delta in px which show button</td>
+</tr>
+<tr class="even">
+<td>Config.deltaDownHide</td>
+<td><code>200</code></td>
+<td>Scroll down delta in px which hide button</td>
+</tr>
+<tr class="odd">
+<td>Config.activeTimeout</td>
+<td><code>0</code></td>
+<td>For how long time in ms button should have <code>activeClass</code> and be visible after click on button</td>
+</tr>
+<tr class="even">
+<td>Config.scrollActionTimeout</td>
+<td><code>200</code></td>
+<td>For how long should be processing scroll delayed after stop scrolling</td>
+</tr>
+<tr class="odd">
+<td>Config.ns</td>
+<td><code>js-scrolltopable</code></td>
+<td>Button id and prefix for classes</td>
+</tr>
+<tr class="even">
+<td>Config.extraClass</td>
+<td><code>noprint</code></td>
+<td>Button extra class(es)</td>
+</tr>
+<tr class="odd">
+<td>Config.visibleClass</td>
+<td><code>${Config.ns}--visible</code></td>
+<td>Class for visible button</td>
+</tr>
+<tr class="even">
+<td>Config.activeClass</td>
+<td><code>${Config.ns}--active</code></td>
+<td>Class for active button (<code>activeTimeout &gt; 0</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="maintainers">Maintainers</h2>
+<ul>
+<li>Paulo Petrzela paulo@internetguru.io</li>
+<li>George Pavelka george@internetguru.io</li>
+</ul>
+<h2 id="contributing">Contributing</h2>
+<p>Pull requests are welcome, don’t hesitate to contribute.</p>
+<h2 id="donation">Donation</h2>
+<p>If you find this program useful, please <strong>send a donation</strong> to its developers to support their work. If you use this program at your workplace, please suggest that the company make a donation. We appreciate contributions of any size. Donations enable us to spend more time working on this package, and help cover our infrastructure expenses.</p>
+<p>If you’d like to make a donation of any value, please send it to the following PayPal address:</p>
+<p><a href="https://www.paypal.com/donate/?hosted_button_id=FVH97VVYW8NM6">PayPal Donation</a></p>
+<p>Since we aren’t a tax-exempt organization, we can’t offer you a tax deduction. But for all donations over 50 USD, we’d be happy to recognize your contribution on this README file for the next release.</p>
+<p>We are also happy to consider making particular improvements or changes, or giving specific technical assistance, in return for a substantial donation over 100 USD. If you would like to discuss this possibility, write us at info@internetguru.io.</p>
+<p>Another possibility is to pay a software maintenance fee. Again, write us about this at info@internetguru.io to discuss how much you want to pay and how much maintenance we can offer in return.</p>
+<p>Thanks for your support!</p>
+<h2 id="license">License</h2>
+<p>MIT License</p>
+<p>Copyright (c) 2022 Internet Guru</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 </body>
 </html>
