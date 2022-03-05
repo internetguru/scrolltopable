@@ -21,6 +21,9 @@
 # Process only lines starting with "Config."
 /^Config\./ {
 
+  # Remove "Config." string
+  s,,,
+
   # Prepare line with "config_variable", "default_value", "description"
 
   # :numeric value
