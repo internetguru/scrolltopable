@@ -45,8 +45,8 @@ Note: you can install package locally by running `npm i @internetguru/scrolltopa
 | Config.scrollActionTimeout | `200` | For how long should be processing scroll delayed after stop scrolling |
 | Config.ns | `js-scrolltopable` | Button id and prefix for classes |
 | Config.extraClass | `noprint` | Button extra class(es) |
-| Config.visibleClass | ``${Config.ns}--visible`` | Class for visible button |
-| Config.activeClass | ``${Config.ns}--active`` | Class for active button (`activeTimeout > 0`) |
+| Config.visibleClass | `` `${Config.ns}--visible` `` | Class for visible button |
+| Config.activeClass | `` `${Config.ns}--active` `` | Class for active button (`activeTimeout > 0`) |
 
 ## Maintainers
 
