@@ -34,20 +34,20 @@
 </blockquote>
 <p>See our <a href="https://internetguru.github.io/scrolltopable/">demo</a>.</p>
 <h2 id="simple-usage">Simple Usage</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">&lt;head&gt;</span></a>
-<a class="sourceLine" id="cb1-2" title="2">  <span class="co">&lt;!-- include basic css --&gt;</span></a>
-<a class="sourceLine" id="cb1-3" title="3">  <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> href=</span><span class="st">&quot;https://unpkg.com/@internetguru/scrolltopable@latest/basic.css&quot;</span><span class="kw">/&gt;</span></a>
-<a class="sourceLine" id="cb1-4" title="4">  <span class="co">&lt;!-- include scrolltopable --&gt;</span></a>
-<a class="sourceLine" id="cb1-5" title="5">  <span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span><span class="ot"> src=</span><span class="st">&quot;https://unpkg.com/@internetguru/scrolltopable@latest/index.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></a>
-<a class="sourceLine" id="cb1-6" title="6">  <span class="co">&lt;!-- initialization with modifying default options --&gt;</span></a>
-<a class="sourceLine" id="cb1-7" title="7">  <span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span><span class="kw">&gt;</span></a>
-<a class="sourceLine" id="cb1-8" title="8">    <span class="im">import</span> <span class="op">{</span> Scrolltopable <span class="op">}</span> <span class="im">from</span> <span class="st">&#39;./index.min.js&#39;</span></a>
-<a class="sourceLine" id="cb1-9" title="9">    <span class="va">Scrolltopable</span>.<span class="at">init</span>(<span class="op">{</span></a>
-<a class="sourceLine" id="cb1-10" title="10">      <span class="dt">text</span><span class="op">:</span> <span class="st">&#39;⌃&#39;</span><span class="op">,</span></a>
-<a class="sourceLine" id="cb1-11" title="11">      <span class="dt">hideTop</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></a>
-<a class="sourceLine" id="cb1-12" title="12">    <span class="op">}</span>)</a>
-<a class="sourceLine" id="cb1-13" title="13">  <span class="kw">&lt;/script&gt;</span></a>
-<a class="sourceLine" id="cb1-14" title="14"><span class="kw">&lt;/head&gt;</span></a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>  <span class="co">&lt;!-- include basic css --&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>  <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> href=</span><span class="st">&quot;https://unpkg.com/@internetguru/scrolltopable@latest/basic.css&quot;</span><span class="kw">/&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>  <span class="co">&lt;!-- include scrolltopable --&gt;</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>  <span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span><span class="ot"> src=</span><span class="st">&quot;https://unpkg.com/@internetguru/scrolltopable@latest/index.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>  <span class="co">&lt;!-- initialization with modifying default options --&gt;</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>  <span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="im">import</span> <span class="op">{</span> Scrolltopable <span class="op">}</span> <span class="im">from</span> <span class="st">&#39;./index.min.js&#39;</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="va">Scrolltopable</span>.<span class="at">init</span>(<span class="op">{</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>      <span class="dt">text</span><span class="op">:</span> <span class="st">&#39;↑&#39;</span><span class="op">,</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a>      <span class="dt">hideTop</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="op">}</span>)</span>
+<span id="cb1-13"><a href="#cb1-13"></a>  <span class="kw">&lt;/script&gt;</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
 <p>Note: you can install package locally by running <code>npm i @internetguru/scrolltopable --save</code>.</p>
 <h2 id="options">Options</h2>
 <table>
@@ -65,63 +65,63 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td>Config.text</td>
+<td>text</td>
 <td><code>^</code></td>
 <td>Text or HTML to be inserted into main element</td>
 </tr>
 <tr class="even">
-<td>Config.title</td>
+<td>title</td>
 <td><code>Top</code></td>
 <td>Button title</td>
 </tr>
 <tr class="odd">
-<td>Config.hideTop</td>
+<td>hideTop</td>
 <td><code>500</code></td>
 <td>Position in px from the top of the page where button will be hidden</td>
 </tr>
 <tr class="even">
-<td>Config.showBottom</td>
+<td>showBottom</td>
 <td><code>500</code></td>
 <td>Position in from the bottom of the page where button will be shown</td>
 </tr>
 <tr class="odd">
-<td>Config.deltaUpShow</td>
+<td>deltaUpShow</td>
 <td><code>200</code></td>
 <td>Scroll up delta in px which show button</td>
 </tr>
 <tr class="even">
-<td>Config.deltaDownHide</td>
+<td>deltaDownHide</td>
 <td><code>200</code></td>
 <td>Scroll down delta in px which hide button</td>
 </tr>
 <tr class="odd">
-<td>Config.activeTimeout</td>
+<td>activeTimeout</td>
 <td><code>0</code></td>
 <td>For how long time in ms button should have <code>activeClass</code> and be visible after click on button</td>
 </tr>
 <tr class="even">
-<td>Config.scrollActionTimeout</td>
+<td>scrollActionTimeout</td>
 <td><code>200</code></td>
 <td>For how long should be processing scroll delayed after stop scrolling</td>
 </tr>
 <tr class="odd">
-<td>Config.ns</td>
+<td>ns</td>
 <td><code>js-scrolltopable</code></td>
 <td>Button id and prefix for classes</td>
 </tr>
 <tr class="even">
-<td>Config.extraClass</td>
+<td>extraClass</td>
 <td><code>noprint</code></td>
 <td>Button extra class(es)</td>
 </tr>
 <tr class="odd">
-<td>Config.visibleClass</td>
-<td><code>${Config.ns}--visible</code></td>
+<td>visibleClass</td>
+<td><code>`${Config.ns}--visible`</code></td>
 <td>Class for visible button</td>
 </tr>
 <tr class="even">
-<td>Config.activeClass</td>
-<td><code>${Config.ns}--active</code></td>
+<td>activeClass</td>
+<td><code>`${Config.ns}--active`</code></td>
 <td>Class for active button (<code>activeTimeout &gt; 0</code>)</td>
 </tr>
 </tbody>
