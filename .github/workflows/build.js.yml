@@ -24,6 +24,8 @@ jobs:
     - run: npm ci
     - run: npm --no-git-tag-version --allow-same-version version $(<VERSION)
     - run: npm run prepublishOnly
+    - name: Regenerate README
+      run: ./regenerate-readme.sed -i README.md
     - name: Build html
       uses: r-lib/actions/setup-pandoc@v1
     - run: ./demo.sh
