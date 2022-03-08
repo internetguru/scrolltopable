@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 ### Added
+ - Automatically regenerate index.html from README
  - README Options section is automatically generated from js configuration.
 
 ## [0.4.0] - 2022-03-01
