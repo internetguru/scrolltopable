@@ -26,6 +26,9 @@ jobs:
     - run: npm run prepublishOnly
     - name: Regenerate README
       run: ./regenerate-readme.sed -i README.md
+    - name: Build html
+      uses: r-lib/actions/setup-pandoc@v1
+    - run: ./demo.sh
     - name: Commit files
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
