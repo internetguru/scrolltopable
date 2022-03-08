@@ -24,11 +24,8 @@ jobs:
     - run: npm ci
     - run: npm --no-git-tag-version --allow-same-version version $(<VERSION)
     - run: npm run prepublishOnly
-    #- name: Render Markdown into HTML
-    #  uses: ZacJW/markdown-html-action@1.1.1
-    #  with:
-    #    input_files: README.md
-    #    output_files: index.html
+    - name: Regenerate README
+      run: ./regenerate-readme.sed -i README.md
     - name: Commit files
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
