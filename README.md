@@ -51,6 +51,7 @@ Launch a rocket after clicking a button! [See it in production](https://www.webt
       activeTimeout: 1500
     })
   </script>
+  <!-- launch animation and rocket icon styles -->
   <style type="text/css">
     html {
       scroll-behavior: smooth;
