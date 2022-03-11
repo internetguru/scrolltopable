@@ -31,6 +31,55 @@ See our [demo](https://internetguru.github.io/scrolltopable/).
 
 Note: you can install package locally by running `npm i @internetguru/scrolltopable --save`.
 
+## Advanced Example
+
+Launch a rocket after clicking a button! [See it in production](https://www.webtesting.cz/).
+
+```html
+<head>
+  <!-- include basic css -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@internetguru/scrolltopable@latest/basic.css"/>
+  <!-- include fontawesome -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  <!-- include scrolltopable -->
+  <script type="module" src="index.js"></script>
+  <!-- initialization with modifying default options -->
+  <script type="module">
+    import { Scrolltopable } from './index.js'
+    Scrolltopable.init({
+      text: "<span class='fa fa-fw fa-space-shuttle fa-rotate-270'></span>",
+      activeTimeout: 1500
+    })
+  </script>
+  <style type="text/css">
+    html {
+      scroll-behavior: smooth;
+    }
+    #js-scrolltopable {
+      background: none;
+    }
+    #js-scrolltopable svg {
+      position: relative;
+      left: 0;
+      top: -0.25em;
+      font-size: 0.65em;
+      color: black;
+    }
+    #js-scrolltopable.js-scrolltopable--active {
+      animation-name: launch;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-fill-mode: forwards;
+      opacity: 1;
+    }
+    @keyframes launch {
+      90% {bottom: 100vh; opacity: 1;}
+      100% {bottom: 100vh; opacity: 0;}
+    }
+  </style>
+</head>
+```
+
 ## Options
 
 |Configuration name|Default value|Description|
