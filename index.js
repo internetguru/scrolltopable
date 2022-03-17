@@ -83,7 +83,7 @@ let Scrolltopable = function () {
         }
         button.classList.add(Config.activeClass)
         window.setTimeout(() => {
-          button.classList.remove(Config.visibleClass)
+          button.classList.remove(Config.activeClass)
           hideButton()
         }, Config.activeTimeout)
       })
