@@ -49,6 +49,51 @@
 <span id="cb1-13"><a href="#cb1-13"></a>  <span class="kw">&lt;/script&gt;</span></span>
 <span id="cb1-14"><a href="#cb1-14"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
 <p>Note: you can install package locally by running <code>npm i @internetguru/scrolltopable --save</code>.</p>
+<h2 id="advanced-example">Advanced Example</h2>
+<p>Launch a rocket after clicking a button! <a href="https://www.webtesting.cz/">See it in production</a>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">&lt;head&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>  <span class="co">&lt;!-- include basic css --&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>  <span class="kw">&lt;link</span><span class="ot"> rel=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="ot"> href=</span><span class="st">&quot;https://unpkg.com/@internetguru/scrolltopable@latest/basic.css&quot;</span><span class="kw">/&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>  <span class="co">&lt;!-- include fontawesome --&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>  <span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;text/javascript&quot;</span><span class="ot"> src=</span><span class="st">&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a>  <span class="co">&lt;!-- include scrolltopable --&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a>  <span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span><span class="ot"> src=</span><span class="st">&quot;index.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a>  <span class="co">&lt;!-- initialization with modifying default options --&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>  <span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a>    <span class="im">import</span> <span class="op">{</span> Scrolltopable <span class="op">}</span> <span class="im">from</span> <span class="st">&#39;./index.js&#39;</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a>    <span class="va">Scrolltopable</span>.<span class="at">init</span>(<span class="op">{</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a>      <span class="dt">text</span><span class="op">:</span> <span class="st">&quot;&lt;span class=&#39;fa fa-fw fa-space-shuttle fa-rotate-270&#39;&gt;&lt;/span&gt;&quot;</span><span class="op">,</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a>      <span class="dt">activeTimeout</span><span class="op">:</span> <span class="dv">1500</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a>    <span class="op">}</span>)</span>
+<span id="cb2-15"><a href="#cb2-15"></a>  <span class="kw">&lt;/script&gt;</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a>  <span class="co">&lt;!-- launch animation and rocket icon styles --&gt;</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a>  <span class="kw">&lt;style</span><span class="ot"> type=</span><span class="st">&quot;text/css&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a>    html {</span>
+<span id="cb2-19"><a href="#cb2-19"></a>      scroll-behavior: smooth<span class="op">;</span></span>
+<span id="cb2-20"><a href="#cb2-20"></a>    }</span>
+<span id="cb2-21"><a href="#cb2-21"></a>    <span class="pp">#js-scrolltopable</span> {</span>
+<span id="cb2-22"><a href="#cb2-22"></a>      <span class="kw">background</span>: <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb2-23"><a href="#cb2-23"></a>    }</span>
+<span id="cb2-24"><a href="#cb2-24"></a>    <span class="pp">#js-scrolltopable</span> svg {</span>
+<span id="cb2-25"><a href="#cb2-25"></a>      <span class="kw">position</span>: <span class="dv">relative</span><span class="op">;</span></span>
+<span id="cb2-26"><a href="#cb2-26"></a>      <span class="kw">left</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-27"><a href="#cb2-27"></a>      <span class="kw">top</span>: <span class="dv">-0.25</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb2-28"><a href="#cb2-28"></a>      <span class="kw">font-size</span>: <span class="dv">0.65</span><span class="dt">em</span><span class="op">;</span></span>
+<span id="cb2-29"><a href="#cb2-29"></a>      <span class="kw">color</span>: <span class="cn">black</span><span class="op">;</span></span>
+<span id="cb2-30"><a href="#cb2-30"></a>    }</span>
+<span id="cb2-31"><a href="#cb2-31"></a>    <span class="pp">#js-scrolltopable</span><span class="fu">.js-scrolltopable--active</span> {</span>
+<span id="cb2-32"><a href="#cb2-32"></a>      <span class="kw">animation-name</span>: launch<span class="op">;</span></span>
+<span id="cb2-33"><a href="#cb2-33"></a>      <span class="kw">animation-duration</span>: <span class="dv">1</span><span class="dt">s</span><span class="op">;</span></span>
+<span id="cb2-34"><a href="#cb2-34"></a>      <span class="kw">animation-timing-function</span>: <span class="dv">ease-in</span><span class="op">;</span></span>
+<span id="cb2-35"><a href="#cb2-35"></a>      <span class="kw">animation-fill-mode</span>: <span class="dv">forwards</span><span class="op">;</span></span>
+<span id="cb2-36"><a href="#cb2-36"></a>      <span class="kw">opacity</span>: <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb2-37"><a href="#cb2-37"></a>    }</span>
+<span id="cb2-38"><a href="#cb2-38"></a>    <span class="im">@keyframes</span> launch {</span>
+<span id="cb2-39"><a href="#cb2-39"></a>      <span class="dv">90%</span> {<span class="kw">bottom</span>: <span class="dv">100</span><span class="dt">vh</span><span class="op">;</span> <span class="kw">opacity</span>: <span class="dv">1</span><span class="op">;</span>}</span>
+<span id="cb2-40"><a href="#cb2-40"></a>      <span class="dv">100%</span> {<span class="kw">bottom</span>: <span class="dv">100</span><span class="dt">vh</span><span class="op">;</span> <span class="kw">opacity</span>: <span class="dv">0</span><span class="op">;</span>}</span>
+<span id="cb2-41"><a href="#cb2-41"></a>    }</span>
+<span id="cb2-42"><a href="#cb2-42"></a>  <span class="kw">&lt;/style&gt;</span></span>
+<span id="cb2-43"><a href="#cb2-43"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
 <h2 id="options">Options</h2>
 <table>
 <colgroup>
