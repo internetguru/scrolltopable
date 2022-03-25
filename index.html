@@ -43,7 +43,7 @@
 <span id="cb1-7"><a href="#cb1-7"></a>  <span class="kw">&lt;script</span><span class="ot"> type=</span><span class="st">&quot;module&quot;</span><span class="kw">&gt;</span></span>
 <span id="cb1-8"><a href="#cb1-8"></a>    <span class="im">import</span> <span class="op">{</span> Scrolltopable <span class="op">}</span> <span class="im">from</span> <span class="st">&#39;./index.min.js&#39;</span></span>
 <span id="cb1-9"><a href="#cb1-9"></a>    <span class="va">Scrolltopable</span>.<span class="at">init</span>(<span class="op">{</span></span>
-<span id="cb1-10"><a href="#cb1-10"></a>      <span class="dt">text</span><span class="op">:</span> <span class="st">&#39;↑&#39;</span><span class="op">,</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>      <span class="dt">text</span><span class="op">:</span> <span class="st">&#39;Top&#39;</span><span class="op">,</span></span>
 <span id="cb1-11"><a href="#cb1-11"></a>      <span class="dt">hideTop</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
 <span id="cb1-12"><a href="#cb1-12"></a>    <span class="op">}</span>)</span>
 <span id="cb1-13"><a href="#cb1-13"></a>  <span class="kw">&lt;/script&gt;</span></span>
@@ -96,11 +96,6 @@
 <span id="cb2-43"><a href="#cb2-43"></a><span class="kw">&lt;/head&gt;</span></span></code></pre></div>
 <h2 id="options">Options</h2>
 <table>
-<colgroup>
-<col style="width: 20%" />
-<col style="width: 30%" />
-<col style="width: 50%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th>Configuration name</th>
@@ -110,9 +105,9 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td>text</td>
-<td><code>^</code></td>
-<td>Text or HTML to be inserted into main element</td>
+<td>content</td>
+<td><code>↑</code></td>
+<td>Button content (raw HTML)</td>
 </tr>
 <tr class="even">
 <td>title</td>
@@ -120,54 +115,54 @@
 <td>Button title</td>
 </tr>
 <tr class="odd">
-<td>hideTop</td>
-<td><code>500</code></td>
-<td>Position in px from the top of the page where button will be hidden</td>
-</tr>
-<tr class="even">
-<td>showBottom</td>
-<td><code>500</code></td>
-<td>Position in from the bottom of the page where button will be shown</td>
-</tr>
-<tr class="odd">
-<td>deltaUpShow</td>
-<td><code>200</code></td>
-<td>Scroll up delta in px which show button</td>
-</tr>
-<tr class="even">
-<td>deltaDownHide</td>
-<td><code>200</code></td>
-<td>Scroll down delta in px which hide button</td>
-</tr>
-<tr class="odd">
-<td>activeTimeout</td>
-<td><code>0</code></td>
-<td>For how long time in ms button should have <code>activeClass</code> and be visible after click on button</td>
-</tr>
-<tr class="even">
-<td>scrollActionTimeout</td>
-<td><code>200</code></td>
-<td>For how long should be processing scroll delayed after stop scrolling</td>
-</tr>
-<tr class="odd">
-<td>ns</td>
+<td>id</td>
 <td><code>js-scrolltopable</code></td>
-<td>Button id and prefix for classes</td>
+<td>Button id and class name</td>
+</tr>
+<tr class="even">
+<td>visibleClass</td>
+<td><code>js-scrolltopable--visible</code></td>
+<td>Class for visible button</td>
+</tr>
+<tr class="odd">
+<td>activeClass</td>
+<td><code>js-scrolltopable--active</code></td>
+<td>Class for active button</td>
 </tr>
 <tr class="even">
 <td>extraClass</td>
 <td><code>noprint</code></td>
-<td>Button extra class(es)</td>
+<td>List of extra classes separated by space</td>
 </tr>
 <tr class="odd">
-<td>visibleClass</td>
-<td><code>`${Config.ns}--visible`</code></td>
-<td>Class for visible button</td>
+<td>hideBeforeTop</td>
+<td><code>500</code></td>
+<td>No-show zone from the top (px)</td>
 </tr>
 <tr class="even">
-<td>activeClass</td>
-<td><code>`${Config.ns}--active`</code></td>
-<td>Class for active button (<code>activeTimeout &gt; 0</code>)</td>
+<td>showBeforeBottom</td>
+<td><code>500</code></td>
+<td>No-hide zone from the button (px)</td>
+</tr>
+<tr class="odd">
+<td>showAfterUp</td>
+<td><code>200</code></td>
+<td>Show the button after scrolling up (px)</td>
+</tr>
+<tr class="even">
+<td>hideAfterDown</td>
+<td><code>200</code></td>
+<td>Hide the button after scrolling down (px)</td>
+</tr>
+<tr class="odd">
+<td>activeTime</td>
+<td><code>0</code></td>
+<td>Keep <code>activeClass</code> after clicking the button (ms)</td>
+</tr>
+<tr class="even">
+<td>scrollActionDelay</td>
+<td><code>200</code></td>
+<td>Wait before evaluating scrolling (ms)</td>
 </tr>
 </tbody>
 </table>

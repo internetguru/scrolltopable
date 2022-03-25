@@ -85,18 +85,18 @@ Launch a rocket after clicking a button! [See it in production](https://www.webt
 
 |Configuration name|Default value|Description|
 |------------------|-------------|-----------|
-| text | `^` | Text or HTML to be inserted into main element |
+| content | `↑` | Button content (raw HTML) |
 | title | `Top` | Button title |
-| hideTop | `500` | Position in px from the top of the page where button will be hidden |
-| showBottom | `500` | Position in from the bottom of the page where button will be shown |
-| deltaUpShow | `200` | Scroll up delta in px which show button |
-| deltaDownHide | `200` | Scroll down delta in px which hide button |
-| activeTimeout | `0` | For how long time in ms button should have `activeClass` and be visible after click on button |
-| scrollActionTimeout | `200` | For how long should be processing scroll delayed after stop scrolling |
-| ns | `js-scrolltopable` | Button id and prefix for classes |
-| extraClass | `noprint` | Button extra class(es) |
-| visibleClass | `` `${Config.ns}--visible` `` | Class for visible button |
-| activeClass | `` `${Config.ns}--active` `` | Class for active button (`activeTimeout > 0`) |
+| id | `js-scrolltopable` | Button id and class name |
+| visibleClass | `js-scrolltopable--visible` | Class for visible button |
+| activeClass | `js-scrolltopable--active` | Class for active button |
+| extraClass | `noprint` | List of extra classes separated by space |
+| hideBeforeTop | `500` | No-show zone from the top (px) |
+| showBeforeBottom | `500` | No-hide zone from the button (px) |
+| showAfterUp | `200` | Show the button after scrolling up (px) |
+| hideAfterDown | `200` | Hide the button after scrolling down (px) |
+| activeTime | `0` | Keep `activeClass` after clicking the button (ms) |
+| scrollActionDelay | `200` | Wait before evaluating scrolling (ms) |
 
 ## Maintainers
 
