@@ -8,7 +8,7 @@
 
 > Scrolltopable is a JavaScript module that provides **ultimate scroll-to-top** functionality. **No dependencies and frameworks**, pure JavaScript!
 
-See our [demo](https://internetguru.github.io/scrolltopable/).
+[See our demo](https://internetguru.github.io/scrolltopable/).
 
 ## Simple Usage
 
