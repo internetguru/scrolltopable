@@ -1,4 +1,4 @@
-.js-scrolltopable {
+#js-scrolltopable {
   display: none;
   position: fixed;
   bottom: 0;
@@ -11,14 +11,15 @@
   border-radius: 0.25em;
   cursor: pointer;
 }
-.js-scrolltopable--visible {
+#js-scrolltopable.js-scrolltopable--visible {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.js-scrolltopable > span {
+#js-scrolltopable > span {
   font-family: Arial, sans-serif;
   font-size: 3em;
   position: relative;
   top: 0.15em;
 }
+

@@ -1,16 +1,16 @@
 var Config = {}
-Config.ns = 'js-scrolltopable' // wrapper element (a) id value
-Config.text = '^' // text content
-Config.title = 'Top' // text content
-Config.hideTop = 500 // display / hide button int px from top
-Config.extraClass = 'noprint'
-Config.visibleClass = `${Config.ns}--visible`
-Config.activeClass = `${Config.ns}--active`
-Config.activeTimeout = 0 // ms
-Config.scrollActionTimeout = 200 // ms
-Config.deltaUpShow = 200
-Config.deltaDownHide = 200
-Config.showBottom = 500
+Config.content = '↑' // Button content (raw HTML)
+Config.title = 'Top' // Button title
+Config.id = 'js-scrolltopable' // Button id and class name
+Config.visibleClass = 'js-scrolltopable--visible' // Class for visible button
+Config.activeClass = 'js-scrolltopable--active' // Class for active button
+Config.extraClass = 'noprint' // List of extra classes separated by space
+Config.hideBeforeTop = 500 // No-show zone from the top (px)
+Config.showBeforeBottom = 500 // No-hide zone from the button (px)
+Config.showAfterUp = 200 // Show the button after scrolling up (px)
+Config.hideAfterDown = 200 // Hide the button after scrolling down (px)
+Config.activeTime = 0 // Keep `activeClass` after clicking the button (ms)
+Config.scrollActionDelay = 200 // Wait before evaluating scrolling (ms)
 
 let Scrolltopable = function () {
 
@@ -36,12 +36,10 @@ let Scrolltopable = function () {
     },
     hideButton = function () {
       displayed = false
-      //let button = document.getElementById(Config.ns)
       button.classList.remove(Config.visibleClass)
     },
     showButton = function () {
       displayed = true
-      //let button = document.getElementById(Config.ns)
       button.classList.add(Config.visibleClass)
     },
     processScroll = function () {
@@ -53,22 +51,22 @@ let Scrolltopable = function () {
         const scrollTop = getScrollTop()
         const delta = scrollTop - lastScrollTop
         const deltaAbs = Math.abs(delta)
-        if (getDocumentHeight() - scrollTop < Config.showBottom) {
+        if (getDocumentHeight() - scrollTop < Config.showBeforeBottom) {
           showButton()
         } else if (
-          scrollTop <= Config.hideTop
-          || (delta > 0 && deltaAbs > Config.deltaDownHide)
+          scrollTop <= Config.hideBeforeTop
+          || (delta > 0 && deltaAbs > Config.hideAfterDown)
         ) {
           hideButton()
-        } else if (deltaAbs > Config.deltaUpShow) {
+        } else if (deltaAbs > Config.showAfterUp) {
           showButton()
         }
         lastScrollTop = scrollTop
-      }, Config.scrollActionTimeout)
+      }, Config.scrollActionDelay)
     },
     initPosition = function () {
       const scrollTop = getScrollTop()
-      if (scrollTop <= Config.hideTop) {
+      if (scrollTop <= Config.hideBeforeTop) {
         return
       }
       showButton()
@@ -78,23 +76,23 @@ let Scrolltopable = function () {
       window.addEventListener('scroll', processScroll, false)
       button.addEventListener('click', (event) => {
         window.scrollTo(0, 0)
-        if (Config.activeTimeout == 0) {
+        if (Config.activeTime == 0) {
           return;
         }
         button.classList.add(Config.activeClass)
         window.setTimeout(() => {
-          button.classList.remove(Config.visibleClass)
+          button.classList.remove(Config.activeClass)
           hideButton()
-        }, Config.activeTimeout)
+        }, Config.activeTime)
       })
     },
     createButton = function () {
       button = document.createElement('a')
-      button.id = Config.ns
+      button.id = Config.id
       button.title = Config.title
-      button.className = `${Config.extraClass} ${Config.ns}`
+      button.className = `${Config.extraClass} ${Config.id}`
       let span = document.createElement('span')
-      span.innerHTML = Config.text
+      span.innerHTML = Config.content
       button.appendChild(span)
       document.body.appendChild(button)
     }
