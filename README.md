@@ -8,7 +8,7 @@
 
 > Scrolltopable is a JavaScript module that provides **ultimate scroll-to-top** functionality. **No dependencies and frameworks**, pure JavaScript!
 
-See our [demo](https://internetguru.github.io/scrolltopable/).
+[See our demo](https://internetguru.github.io/scrolltopable/).
 
 ## Simple Usage
 
@@ -22,7 +22,7 @@ See our [demo](https://internetguru.github.io/scrolltopable/).
   <script type="module">
     import { Scrolltopable } from './index.min.js'
     Scrolltopable.init({
-      text: '⌃',
+      text: 'Top',
       hideTop: 0,
     })
   </script>
@@ -31,22 +31,72 @@ See our [demo](https://internetguru.github.io/scrolltopable/).
 
 Note: you can install package locally by running `npm i @internetguru/scrolltopable --save`.
 
+## Advanced Example
+
+Launch a rocket after clicking a button! [See it in production](https://www.webtesting.cz/).
+
+```html
+<head>
+  <!-- include basic css -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@internetguru/scrolltopable@latest/basic.css"/>
+  <!-- include fontawesome -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+  <!-- include scrolltopable -->
+  <script type="module" src="index.js"></script>
+  <!-- initialization with modifying default options -->
+  <script type="module">
+    import { Scrolltopable } from './index.js'
+    Scrolltopable.init({
+      text: "<span class='fa fa-fw fa-space-shuttle fa-rotate-270'></span>",
+      activeTimeout: 1500
+    })
+  </script>
+  <!-- launch animation and rocket icon styles -->
+  <style type="text/css">
+    html {
+      scroll-behavior: smooth;
+    }
+    #js-scrolltopable {
+      background: none;
+    }
+    #js-scrolltopable svg {
+      position: relative;
+      left: 0;
+      top: -0.25em;
+      font-size: 0.65em;
+      color: black;
+    }
+    #js-scrolltopable.js-scrolltopable--active {
+      animation-name: launch;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-fill-mode: forwards;
+      opacity: 1;
+    }
+    @keyframes launch {
+      90% {bottom: 100vh; opacity: 1;}
+      100% {bottom: 100vh; opacity: 0;}
+    }
+  </style>
+</head>
+```
+
 ## Options
 
 |Configuration name|Default value|Description|
 |------------------|-------------|-----------|
-|Config.text | `^` | Text or HTML to be inserted into main element |
-|Config.title | `Top` | Button title |
-|Config.hideTop | `500` | Position in px from the top of the page where button will be hidden |
-|Config.showBottom | `500` | Position in from the bottom of the page where button will be shown |
-|Config.deltaUpShow | `200` | Scroll up delta in px which show button |
-|Config.deltaDownHide | `200` | Scroll down delta in px which hide button |
-|Config.activeTimeout | `0` | For how long time in ms button should have `activeClass` and be visible after click on button |
-|Config.scrollActionTimeout | `200` | For how long should be processing scroll delayed after stop scrolling |
-|Config.ns | `js-scrolltopable` | Button id and prefix for classes |
-|Config.extraClass | `noprint` | Button extra class(es) |
-|Config.visibleClass | `${Config.ns}--visible` | Class for visible button |
-|Config.activeClass | `${Config.ns}--active` | Class for active button (`activeTimeout > 0`) |
+| content | `↑` | Button content (raw HTML) |
+| title | `Top` | Button title |
+| id | `js-scrolltopable` | Button id and class name |
+| visibleClass | `js-scrolltopable--visible` | Class for visible button |
+| activeClass | `js-scrolltopable--active` | Class for active button |
+| extraClass | `noprint` | List of extra classes separated by space |
+| hideBeforeTop | `500` | No-show zone from the top (px) |
+| showBeforeBottom | `500` | No-hide zone from the button (px) |
+| showAfterUp | `200` | Show the button after scrolling up (px) |
+| hideAfterDown | `200` | Hide the button after scrolling down (px) |
+| activeTime | `0` | Keep `activeClass` after clicking the button (ms) |
+| scrollActionDelay | `200` | Wait before evaluating scrolling (ms) |
 
 ## Maintainers
 
